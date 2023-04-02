@@ -2,8 +2,13 @@ package at.paulh;
 
 public class Main {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	private static String name = "Paul";
+	private static int age = 28;
+	public static void main(String[] args) throws ClassNotFoundException {
+		MySQL.connect();
+		
+		MySQL.update("INSERT INTO `user`(`Name`, `Age`) VALUES ('" + name + "','" + age + "')");
+		MySQL.disconnect();
 
 	}
 

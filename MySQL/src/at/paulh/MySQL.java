@@ -10,7 +10,7 @@ public class MySQL {
 	private static final String port = "3306";
 	private static final String database = "mysql.test";
 	private static final String password = "";
-	private static final String username = "roor";
+	private static final String username = "root";
 	
 	
 	private static Connection con;
@@ -25,7 +25,7 @@ public class MySQL {
 			
 			
 			try {
-				Class.forName("com.mysql.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				
 				con = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database, username, password);
 				System.out.println("[MySQL] Verbunden!");
